@@ -10,7 +10,7 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="text-xl font-bold tracking-wide">
-          HEXAMIND
+          ALPHA STRENGTH
         </div>
 
         {/* Desktop menu */}
