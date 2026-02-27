@@ -30,7 +30,7 @@ export default function Hero() {
           transition={{ delay: 0.15, duration: 0.6 }}
           className="mt-6 max-w-2xl mx-auto text-white/70 text-lg"
         >
-          Welcome to HexaMind Gym — where intelligent training meets
+          Welcome to Alpha Strength — where intelligent training meets
           elite performance.
         </motion.p>
 
