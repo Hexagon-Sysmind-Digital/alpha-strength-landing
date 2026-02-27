@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "HexaMind Gym",
+  title: "Alpha Strength",
   description: "Train the Body. Master the Mind.",
 };
 
