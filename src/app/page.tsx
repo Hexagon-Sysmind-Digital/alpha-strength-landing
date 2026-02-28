@@ -2,7 +2,6 @@ import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import Features from "@/components/sections/Features";
 import PricingPreview from "@/components/sections/PricingPreview";
-import BMICalculator from "@/components/sections/BMICalculator";
 import Testimonials from "@/components/sections/Testimonials";
 import Trainers from "@/components/sections/Trainers";
 import Classes from "@/components/sections/Classes";
@@ -20,7 +19,6 @@ export default function HomePage() {
       <Schedule />
       <Trainers />
       <PricingPreview />
-      <BMICalculator />
       <Testimonials />
       <Contact />
       <Footer/>

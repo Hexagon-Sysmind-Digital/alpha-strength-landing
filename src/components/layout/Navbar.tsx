@@ -4,14 +4,14 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { label: "Home", href: "#home", id: "home" },
-  { label: "Features", href: "#features", id: "features" },
-  { label: "Classes", href: "#classes", id: "classes" },
-  { label: "Schedule", href: "#schedule", id: "schedule" },
-  { label: "Trainers", href: "#trainers", id: "trainers" },
-  { label: "Pricing", href: "#pricing", id: "pricing" },
-  { label: "BMI", href: "#bmi", id: "bmi" },
-  { label: "Testimonials", href: "#testimonials", id: "testimonials" },
+  { label: "Home", href: "/#home", id: "home" },
+  { label: "Features", href: "/#features", id: "features" },
+  { label: "Classes", href: "/#classes", id: "classes" },
+  { label: "Schedule", href: "/#schedule", id: "schedule" },
+  { label: "Trainers", href: "/#trainers", id: "trainers" },
+  { label: "Pricing", href: "/#pricing", id: "pricing" },
+  { label: "BMI", href: "/bmi", id: "bmi" },
+  { label: "Testimonials", href: "/#testimonials", id: "testimonials" },
   { label: "Contact", href: "#contact", id: "contact" },
 ];
 
@@ -48,10 +48,15 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur border-b border-white/10">
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <div className="text-xl font-bold tracking-wide">
-          ALPHA STRENGTH
-        </div>
+        {/* 🔥 LOGO */}
+        <a href="#home" className="flex items-center">
+          <img
+            src="/images/branding/logo.png"
+            alt="Alpha Strength"
+            className="h-8 w-auto object-contain"
+          />
+          <div className="text-xl font-bold tracking-wide"> ALPHA STRENGTH </div>
+        </a>
 
         {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-8 text-sm">
@@ -78,7 +83,7 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-white text-2xl"
           onClick={() => setOpen(!open)}
         >
           ☰

@@ -4,6 +4,11 @@ import { motion } from "framer-motion";
 import { trainers } from "@/data/trainers";
 import { Card } from "@/components/ui/Card";
 
+// 🔥 helper slug
+function toSlug(name: string) {
+  return name.toLowerCase().replace(/\s+/g, "-");
+}
+
 export default function Trainers() {
   return (
     <section id="trainers" className="py-24">
@@ -52,10 +57,26 @@ export default function Trainers() {
               }}
             >
               <Card className="group p-6 text-center">
+                {/* 🔥 AVATAR PHOTO */}
+                <div className="relative mx-auto w-24 h-24">
+                  <img
+                    src={`/images/trainers/${toSlug(trainer.name)}.jpeg`}
+                    alt={trainer.name}
+                    className="w-full h-full object-cover rounded-full ring-2 ring-white/10 transition-transform duration-300 group-hover:scale-105"
+                    onError={(e) => {
+                      // fallback ke initial kalau foto tidak ada
+                      const target = e.currentTarget as HTMLImageElement;
+                      target.style.display = "none";
+                      const fallback =
+                        target.nextElementSibling as HTMLElement;
+                      if (fallback) fallback.style.display = "flex";
+                    }}
+                  />
 
-                {/* avatar */}
-                <div className="mx-auto w-20 h-20 rounded-full bg-gradient-to-br from-red-500/30 to-red-500/5 flex items-center justify-center text-xl font-bold">
-                  {trainer.name.charAt(0)}
+                  {/* fallback avatar */}
+                  <div className="hidden absolute inset-0 rounded-full bg-gradient-to-br from-red-500/30 to-red-500/5 items-center justify-center text-xl font-bold">
+                    {trainer.name.charAt(0)}
+                  </div>
                 </div>
 
                 {/* name */}
@@ -72,7 +93,7 @@ export default function Trainers() {
                 <p className="text-xs text-white/50 mt-2">
                   {trainer.experience}
                 </p>
-                </Card>
+              </Card>
             </motion.div>
           ))}
         </motion.div>

@@ -5,15 +5,14 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-black">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid gap-10 md:grid-cols-4">
-          {/* Brand */}
+          {/* 🔥 Brand */}
           <div>
-            <div className="text-xl font-bold tracking-wide">
-              ALPHA STRENGTH
-            </div>
-            <p className="mt-4 text-sm text-white/60 max-w-xs">
-              Intelligent training for elite performance. Build your
-              strongest version with Alpha Strength.
-            </p>
+            <img
+              src="/images/branding/logo.png"
+              alt="Alpha Strength"
+              className="h-30 w-auto object-contain"
+            />
+            <div className="text-xl font-bold tracking-wide"> ALPHA STRENGTH </div>
           </div>
 
           {/* Navigation */}
